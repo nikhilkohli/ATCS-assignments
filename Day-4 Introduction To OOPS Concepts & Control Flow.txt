@@ -1,0 +1,623 @@
+Section 1:
+
+Question 1:
+
+package atcs;
+
+public class Hello {
+	public static void main(String args[])
+	{
+		System.out.println("Hello welcome to atcs");
+	}
+
+}
+
+Output: Hello welcome to atcs
+
+----------------------------------------------------------------------------
+Question 2:
+
+package atcs;
+
+import java.io.*;
+
+public class Hello {
+	public static void main(String args[])
+	{
+		
+		int a=5,b=6;
+		char x ='a';
+		char y = 'b';
+		
+		int sum_num = a+b;
+		String c = "" + x + y;
+	
+		
+		System.out.println("sum of numbers = " +sum_num);
+		System.out.println("sum of characters = "+ c);
+	}
+
+}
+
+Output:
+ sum of numbers = 11
+ sum of characters = ab
+
+----------------------------------------------------------------------------------
+Question 3:
+
+package atcs;
+
+import java.io.*;
+
+public class Hello {
+	public static void main(String args[])
+	{
+		
+		int p=2000,t=5,n=12;
+		double r=0.08;
+		
+		
+		 double amount = p * Math.pow(1 + (r / n), n * t);
+	     double cinterest = amount - p;
+	     
+	     System.out.println("Compound Interest after " + t + " years: "+cinterest);
+	     System.out.println("Amount after " + t + " years: "+amount);
+		
+	}
+
+}
+
+Output: 
+         Compound Interest after 5 years: 979.6914166032102
+         Amount after 5 years: 2979.69141660321
+
+package atcs;
+
+import java.io.*;
+
+public class Hello {
+	public static void main(String args[])
+	{
+		
+		int base = 3, exponent = 4;
+
+	    long result = 1;
+
+	    while (exponent != 0) {
+	      result *= base;
+	      --exponent;
+	    }
+
+	    System.out.println("Answer = " + result);
+	}
+
+}
+
+Output: 
+          Answer = 81
+
+package atcs;
+
+import java.io.*;
+
+public class Hello {
+	public static void main(String args[])
+	{
+		
+		int first = 12, second = 24;
+
+        System.out.println("--Before swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
+
+        
+        int temporary = first;
+
+       
+        first = second;
+
+       
+        second = temporary;
+
+        System.out.println("--After swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
+	}
+
+}
+
+Output: 
+
+--Before swap--
+First number = 12
+Second number = 24
+--After swap--
+First number = 24
+Second number = 12
+
+----------------------------------------------------------------------------------------------------------------------
+
+Question 4:
+
+package atcs;
+
+import java.io.*;
+
+public class Hello {
+	public static void main(String args[])
+	{
+		
+		
+        int l=5;
+        int b=2;
+        
+        double  area=l*b;
+        System.out.println("Area of Rectangle is: " + area);
+        
+	}
+
+}
+Output: 
+       Area of Rectangle is: 10.0
+
+
+package atcs;
+
+import java.io.*;
+
+public class Hello {
+	public static void main(String args[])
+	{
+        
+        float r=5;
+    
+        float area = (float)(3.14*r*r);
+        float circum = (float)(2*3.14*r);
+        System.out.println("\nArea = " +area);
+        System.out.println("Circumference = " +circum);
+	}
+
+}
+Output:
+          Area = 78.5
+          Circumference = 31.4
+
+
+package atcs;
+
+import java.io.*;
+
+public class Hello {
+	public static void main(String args[])
+	{
+        
+		 char ch = 'a';
+	     int ascii = ch;
+	     
+	     int castAscii = (int) ch;
+
+	      System.out.println("The ASCII value of " + ch + " is: " + ascii);
+	      System.out.println("The ASCII value of " + ch + " is: " + castAscii);
+	    
+	}
+
+}
+
+Output:  
+        The ASCII value of a is: 97
+        The ASCII value of a is: 97
+
+----------------------------------------------------------------------------
+
+Question 5:
+
+package atcs;
+
+import java.io.*;
+
+public class Hello {
+	
+	static byte b;
+	static short s;
+	static int i;
+	static long l;
+	static float f;
+	static double d;
+	static char c;
+	static boolean bl;
+	
+	public static void main(String args[])
+	{
+        
+		System.out.println("The default values of primitive data types are:");
+		System.out.println("Byte :"+b);
+		System.out.println("Short :"+s);
+		System.out.println("Int :"+i);
+		System.out.println("Long :"+l);
+		System.out.println("Float :"+f);
+		System.out.println("Double :"+d);
+		System.out.println("Char :"+c);
+		System.out.println("Boolean :"+bl);
+		
+	}
+
+}
+
+Output:
+
+The default values of primitive data types are:
+Byte :0
+Short :0
+Int :0
+Long :0
+Float :0.0
+Double :0.0
+Char :
+
+-------------------------------------------------------------------------------------------
+
+Question 6:
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	public static void main(String args[])
+	{
+		int n;
+		System.out.println("Enter the value of n");
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		int firstTerm = 0, secondTerm = 1;
+	    System.out.println("Fibonacci Series till " + n + " terms:");
+
+	    for (int i = 1; i <= n; ++i) {
+	      System.out.print(firstTerm + ", ");
+
+	      int nextTerm = firstTerm + secondTerm;
+	      firstTerm = secondTerm;
+	      secondTerm = nextTerm;
+		
+	}
+}
+}
+
+Output:
+
+Enter the value of n
+10
+Fibonacci Series till 10 terms:
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 
+
+
+===================================================================================================================================================================================
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->-->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->-->->->->->->->->->->->->->-
+
+Section-2
+
+
+
+
+Question 1:
+
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	public static void main(String args[])
+	{
+		int i =0;
+	       int num =0;
+	      
+	       String  primeNumbers = "";
+
+	       for (i = 1; i <= 100; i++)         
+	       { 		  	  
+	          int counter=0; 	  
+	          for(num =i; num>=1; num--)
+		  {
+	             if(i%num==0)
+		     {
+	 		counter = counter + 1;
+		     }
+		  }
+		  if (counter ==2)
+		  {
+		    
+		     primeNumbers = primeNumbers + i + " ";
+		  }	
+	       }	
+	       System.out.println("Prime numbers from 1 to 100 are :");
+	       System.out.println(primeNumbers);
+		
+	}
+}
+
+output:
+
+Prime numbers from 1 to 100 are :
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
+
+---------------------------------------------------------------------------
+
+Question 2:
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	public static void main(String args[])
+	{
+		 int num;
+		 int reversedNum = 0, remainder;
+		 
+		 System.out.println("Enter the number");
+		 Scanner sc = new Scanner(System.in);
+		 num = sc.nextInt();
+		    
+		    
+		    int originalNum = num;
+		    
+		 
+		    while (num != 0) {
+		      remainder = num % 10;
+		      reversedNum = reversedNum * 10 + remainder;
+		      num /= 10;
+		    }
+		    
+		  
+		    if (originalNum == reversedNum) {
+		      System.out.println(originalNum + " is Palindrome.");
+		    }
+		    else {
+		      System.out.println(originalNum + " is not Palindrome.");
+		    }
+		
+	}
+}
+
+Output:
+
+       Enter the number
+       3553
+       3553 is Palindrome.
+
+-----------------------------------------------------------------------------
+
+Question 3:
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	public int add(int a ,int b)
+	{
+		return a+b;
+	}
+	
+	public static void Sum_stat(int a, int b) { // static method
+		System.out.println(a + b);
+	}
+	
+	
+	public static void main(String args[])
+	{ 
+		int x=5;
+		int y=10;
+		
+		int sum = x+y;
+		
+		System.out.println("in main method: Sum =  "+sum);
+		
+		
+		Hello obj = new Hello();
+		System.out.println("instance method:  "+obj.add(5,6));
+		
+		Hello.Sum_stat(15, 15);
+		
+		
+	}
+	
+}
+
+Output:
+
+in main method: Sum =  15
+instance method:  11
+30
+
+
+---------------------------------------------------------
+
+Question 4:
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	public static double squareRoot(int number) {
+		double temp;
+
+		double sr = number / 2;
+
+		do {
+			temp = sr;
+			sr = (temp + (number / temp)) / 2;
+		} while ((temp - sr) != 0);
+
+		return sr;
+	    }
+
+	
+	public static void main(String args[])
+	{
+		System.out.print("Enter any number:");
+		Scanner scanner = new Scanner(System.in);
+		int num = scanner.nextInt(); 
+		scanner.close();
+
+		System.out.println("Square root of "+ num+ " is: "+squareRoot(num));
+		
+	}
+}
+
+Output:
+
+    Enter any number:16
+    Square root of 16 is: 4.0
+
+------------------------------------------------------------------------------
+
+Question: 5
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+
+	
+	public static void main(String args[])
+	{
+		int count, i;
+        float totalMarks = 0, percentage, average;
+        Scanner scanner;
+        scanner = new Scanner(System.in);
+ 
+        System.out.println("Enter Number of Subject");
+        count = scanner.nextInt();
+ 
+        System.out.println("Enter Marks of " + count + " Subject");
+        for (i = 0; i < count; i++) {
+            totalMarks += scanner.nextInt();
+        }
+        System.out.println("Total MArks : " + totalMarks);
+        // Each subject is of 100 Marks
+        percentage = (totalMarks / (count * 100)) * 100;
+ 
+        /* Printing grade of a student using switch case statement */
+        switch ((int) percentage / 10) {
+        case 9:
+            System.out.println("Grade : A+");
+            break;
+        case 8:
+        case 7:
+            System.out.println("Grade : A");
+            break;
+        case 6:
+            System.out.println("Grade : B");
+            break;
+        case 5:
+            System.out.println("Grade : C");
+            break;
+        default:
+            System.out.println("Grade : D");
+            break;
+        }
+		
+	}
+}
+
+Output:
+
+Enter Number of Subject
+5
+Enter Marks of 5 Subject
+
+45
+69 
+53
+58
+62
+Total MArks : 287.0
+Grade : C
+
+----------------------------------------------------------------------------------------------
+
+Question 6:
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	
+	public static void main(String args[])
+	{ 
+		int a;
+		System.out.println("enter the number");
+		Scanner sc = new Scanner(System.in);
+		a = sc.nextInt();
+		
+	
+		switch(a) {
+		case 1:
+			System.out.println("number Entered is "+1);
+			break;
+		case 2:
+			System.out.println("number Entered is "+2);
+			break;
+		case 3:
+			System.out.println("number Entered is "+3);
+			break;
+		case 4:
+			System.out.println("number Entered is "+4);
+			break;
+		case 5:
+			System.out.println("number Entered is "+5);
+			break;
+		case 6:
+			System.out.println("number Entered is "+6);
+			break;
+		case 7:
+			System.out.println("number Entered is "+7);
+			break;
+		case 8:
+			System.out.println("number Entered is "+8);
+			break;
+		case 9:
+			System.out.println("number Entered is "+9);
+			break;
+		default:
+			System.out.println("number entered is larger than 9");
+			
+		}	
+		
+	}
+	
+}
+
+	
+Output:
+   
+enter the number
+5
+number Entered is 5
+
+enter the number
+15
+number entered is larger than 9
+
+
+
+

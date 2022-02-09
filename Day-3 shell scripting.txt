@@ -1,0 +1,322 @@
+1.
+
+There are Six types of scripts
+1.Bourne Shell
+2.Bash Shell
+3.Korn Shell
+4.C-Shell
+5.T-Shell
+6.Z-Shell
+
+
+
+
+2. 
+
+nikhilkohli@nikhilkohli-VirtualBox:~$ vi hello.sh
+nikhilkohli@nikhilkohli-VirtualBox:~$ cat hello.sh
+#!/bin/bash
+#date
+#author
+#purpose
+
+echo "hello world!.."
+
+
+#END
+nikhilkohli@nikhilkohli-VirtualBox:~$ ls -ls hello.sh
+-rw-rw-r-- 1 nikhilkohli nikhilkohli 65 Jan 31 14:17 hello.sh
+
+
+3. Create a shell script file and execute (hello world)
+	gedit file1.sh
+>> echo "Hello World"
+ Then ctrl + s and ctrl + q
+>> ./file1.sh
+>> ls -l
+>> chmod u+x file1.sh
+>> ./file1.sh
+
+4. Create a shell script and take the user permission to execute the file.
+	gedit file2.sh
+>> echo "Hello World"
+ Then ctrl + s and ctrl + q
+>> ./file2.sh
+>> ls -l
+>> chmod u+x file1.sh
+>> ./file2.sh
+
+5. How to switch one shell to another shell.(copy and paste)
+First, find out the available shells on your Linux box, runcat /etc/shells
+Type chsh and press Enter key
+You need to enter the new shell full path. For example, /bin/ksh
+Log in and log out to verify that your shell changed corretly on Linux operating systems
+
+>> cat /etc/shells
+>> grep "zsh" /etc/shells
+>> grep "fish" /etc/shells
+
+6. By using sha-bang execute one file.
+	>>gedit file4.txt
+>> #!/bin/sh
+>> echo "Hello!"
+ctrl + s and ctrl + q
+>> sh file4.sh
+
+7. Consider the following variable declaration
+
+           echo name  ==>name 
+
+            echo $name  ==>valid 
+
+           echo '$name' ==>$name
+
+           echo "$name"===>valid 
+>> gedit file5.sh
+>> #!/bin/sh
+>> name="Nikhil Kohli"
+>>echo $name
+
+>>if [$name= "Nikhil Kohli"]
+>>then
+>>echo "Yes"
+>>else
+>>echo "No"
+>>fi
+
+8. To print the number of files in the current working directory 
+>> pwd
+>> ls
+
+9. To display the number of lines present in the file
+>> wc -l sum.sh
+
+10. print current working directory.
+>> pwd
+
+11. write a  script to read employee details and save to the emp.txt file.
+>> gedit file6.sh
+>> read -p "Enter the employee name: " name
+>> read -p "Enter the employee address: " adr
+>> read -p "Enter the employee phone: " phn
+>> read -p "Enter the employee salary: " sal
+>> echo "$name"
+>> echo "$adr"
+>> echo "$phn"
+>> echo "$sal"
+ctrl + s and ctrl + q
+>> ./file6.sh
+>> ls -l
+>> chmod u+x file6.sh
+>> ./file6.sh
+
+12. write a script to read name from the end user and if name is nikhil display
+Some special messages.
+>> gedit file7.sh
+>> read -p "Enter the name: " name
+>> if [$name="nikhil"]
+>> then
+>> echo "How are you nikhil"
+>> else
+>> echo "not matching"
+>> fi
+
+13. Write a simple if else statement.
+>> gedit file8.sh
+>> read -p "Enter a number: " n
+>> if [$n=10]
+>> then
+>> echo "this is Ten"
+>> else
+>> echo "Not Ten"
+>> fi
+
+14. write a simple case atatement.
+
+read -p "enter any digit from 0 to 9: " n
+case $n in
+0)
+echo "this is Zero"
+;;
+1)
+echo "this is one"
+;;
+2)
+echo "this is two"
+;;
+3)
+echo "this is three"
+;;
+4)
+echo "this is four"
+;;
+5)
+echo "this is five"
+;;
+6)
+echo "this is six"
+;;
+7)
+echo "this is seven"
+;;
+8)
+echo "this is eight"
+;;
+9)
+echo "this is nine"
+;;
+
+*)
+default echo "nothing"
+;;
+esac
+
+====================================================================================================================================================================================
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Section 2:
+
+Question 1:
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit (master)
+$ mkdir LocalGit
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit (master)
+$ cd LocalGit
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit (master)
+$ mkdir GitRepository
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit (master)
+$ cd GitRepository
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ git init
+Initialized empty Git repository in C:/Users/Nikhil kohli/projectongit/LocalGit/GitRepository/.git/
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$
+
+----------------------------------------------------------------------------
+
+Question 2:
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit (master)
+$ mkdir LocalGit
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit (master)
+$ cd LocalGit
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit (master)
+$ mkdir GitRepository
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit (master)
+$ cd GitRepository
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ git init
+Initialized empty Git repository in C:/Users/Nikhil kohli/projectongit/LocalGit/GitRepository/.git/
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ touch file.txt
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ ls
+file.txt
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ cat >>file.txt
+hello this is assignment code.
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ cat file.txt
+hello this is assignment code.
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ git add *
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ git add*
+git: 'add*' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ git add *
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file.txt
+
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ git commit-m "initial commit"
+git: 'commit-m' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit-tree
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ git commit -a -m "updated file.txt with a new file"
+[master (root-commit) 45aef86] updated file.txt with a new file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Nikhil kohli@LAPTOP-J9ACAO7U MINGW64 ~/projectongit/LocalGit/GitRepository (master)
+$
+
+-----------------------------------------------------------------------------
+
+Question 6. 
+
+List the changes
+>> git diff
+
+------------------------------------------------------------------------
+
+Question 7.
+
+ Create branch
+>> git branch <branch_name>
+
+----------------------------------------------------------------------------
+
+Question 8. 
+
+Merge branch
+>> git checkout master
+>> git merge <branch_name>
