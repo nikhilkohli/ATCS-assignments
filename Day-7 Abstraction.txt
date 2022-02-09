@@ -1,0 +1,100 @@
+Section 1:
+
+Question 2:
+
+package atcs;
+
+
+class Tea{
+	
+	void addmilk()
+	{
+		System.out.println("Milk is added in the Tea");
+	}
+	
+	
+	
+}
+
+abstract class Coffee extends Tea{
+	
+	@Override
+	void addmilk()
+	{
+		System.out.println("More Milk is Added");
+	}
+	
+	public abstract void addIngredient();
+	
+	
+}
+
+public class Beverages extends Coffee {
+
+	public static void main(String[] args) {
+		
+		Beverages ob = new Beverages();
+		ob.addmilk();
+		ob.addIngredient();
+
+	}
+
+	@Override
+	public void addIngredient() {
+		System.out.println("Ingredient is added: Ginger");
+		
+	}
+
+}
+
+
+Output:
+
+More Milk is Added
+Ingredient is added: Ginger
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 2:
+
+
+Question 3:
+
+package pack1;
+
+public class Protectedclass {
+	
+	
+	protected void show()
+	{
+		System.out.println("this is show method");
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+
+package mypack1;
+import pack1.*;
+
+public class ProtectedAccess extends Protectedclass{
+
+	public static void main(String[] args) {
+		ProtectedAccess ob = new ProtectedAccess();
+		ob.show();
+
+	}
+
+}
+
+Output:
+
+this is show method
+
+

@@ -1,0 +1,493 @@
+Section 1:
+
+Question 1:
+
+package atcs;
+
+public class Kohli {
+	
+	static byte a;
+	static short b;
+	static int c;
+	static long d;
+	static float e;
+	static double f;
+	static char g;
+	static boolean h;
+	
+	 byte i;
+	 short j;
+	 int k;
+	 long l;
+	 float m;
+	 double n;
+	 char o;
+	 boolean p;
+	
+
+	public static void main(String[] args) {
+		
+		System.out.println("The default values of static data types are:");
+		System.out.println("Byte :"+a);
+		System.out.println("Short :"+b);
+		System.out.println("Int :"+c);
+		System.out.println("Long :"+d);
+		System.out.println("Float :"+e);
+		System.out.println("Double :"+f);
+		System.out.println("Char :"+g);
+		System.out.println("Boolean :"+h);
+		
+		Kohli k = new Kohli();
+		
+		System.out.println("The default values of instance data types are:");
+		System.out.println("Byte :"+k.i);
+		System.out.println("Short :"+k.j);
+		System.out.println("Int :"+k.k);
+		System.out.println("Long :"+k.l);
+		System.out.println("Float :"+k.m);
+		System.out.println("Double :"+k.m);
+		System.out.println("Char :"+k.n);
+		System.out.println("Boolean :"+k.o);
+		
+		
+
+	}
+
+}
+
+Output:
+
+The default values of static data types are:
+Byte :0
+Short :0
+Int :0
+Long :0
+Float :0.0
+Double :0.0
+Char :
+
+-----------------------------------------------------------------------------------------
+
+Question 2:
+
+
+package atcs;
+
+public class Employee {
+	
+	
+	int empid = 1;
+	String empname = "Nikhil";
+	int empcode = 45;;
+	String empadd = "Jammu";;
+	
+	
+	public void display()
+	{
+		System.out.println("Employee details are: ");
+		System.out.println("name: "+empname);
+		System.out.println("Employee id: "+empid);
+		System.out.println("Employee Code: "+empcode);
+		System.out.println("Employee Address: "+empadd);
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		Employee ep = new Employee();
+		ep.display();
+		
+		
+
+	}
+
+}
+
+
+Output:
+	
+	Employee details are: 
+		name: Nikhil
+		Employee id: 1
+		Employee Code: 45
+		Employee Address: Jammu
+
+-----------------------------------------------------------------------------------------------------
+
+Question 3 & 4 :
+
+package atcs;
+
+
+class Newcar{
+	
+	String brand;
+	String model;
+	int hp;
+
+	
+	void init()
+
+	{
+		brand = "TATA";
+		model = "PUNCH";
+		hp = 63;
+		
+	}
+	
+	void display()
+	{
+		System.out.println("Values of parent class");
+		System.out.println("Brand: "+brand);
+		System.out.println("model: = "+model);
+		System.out.println("hp :"+hp);
+		
+	}	
+	
+}
+
+
+public class Car extends Newcar {
+	
+	
+	int groundclr;
+	
+	void init1()
+
+	{
+		
+		groundclr = 187;
+		
+	}
+	
+	
+	
+	void display1()
+	{
+		System.out.println("Values of child class");
+		System.out.println("Brand: "+brand);
+		System.out.println("model: = "+model);
+		System.out.println("hp :"+hp);
+		System.out.println("ground clearance :"+groundclr);
+	}	
+	
+	public static void main(String[] args) {
+		
+		Car c = new Car();
+		c.init();
+		c.display();
+		c.init1();
+		c.display1();
+	
+	
+		
+	}
+}
+
+Output:
+	
+	Values of parent class
+	Brand: TATA
+	model: = PUNCH
+	hp :63
+	Values of child class
+	Brand: TATA
+	model: = PUNCH
+	hp :63
+	ground clearance :187
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 5 :
+
+package atcs;
+
+public class Student {
+	
+	int stid;
+	String stname;
+	int roll;
+	char section;
+	
+	
+	public Student()
+	{
+		stid = 1;
+		stname = "Nikhil";
+		roll = 45;
+		section = 'B';
+		
+	}
+	public void display()
+	{
+		System.out.println("Student details are: ");
+		System.out.println("name: "+stname);
+		System.out.println("student id: "+stid);
+		System.out.println("roll no: "+roll);
+		System.out.println("section: "+section);
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		Student st = new Student();
+		st.display();
+		
+		
+
+	}
+
+}
+
+Output:
+
+Student details are: 
+name: Nikhil
+student id: 1
+roll no: 45
+section: B
+
+
+Without Constructor:
+
+package atcs;
+
+public class Student {
+	
+	int stid;
+	String stname;
+	int roll;
+	char section;
+	
+	
+	public void assign ()
+	{
+		stid = 1;
+		stname = "Nikhil";
+		roll = 45;
+		section = 'B';
+		
+	}
+	public void display()
+	{
+		System.out.println("Student details are: ");
+		System.out.println("name: "+stname);
+		System.out.println("student id: "+stid);
+		System.out.println("roll no: "+roll);
+		System.out.println("section: "+section);
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		Student st = new Student();
+		st.assign();
+		st.display();
+		
+		
+
+	}
+
+}
+
+Output:
+
+Student details are: 
+name: Nikhil
+student id: 1
+roll no: 45
+section: B
+
+
+=========================================================================================================================================================================================
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Section 2:
+
+
+
+Question 1:
+
+
+package atcs;
+
+public class Vehicle {
+	
+	String brand;
+	String model;
+	int hp;
+	int grndclearance;
+	
+	
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	public String getModel() {
+		return model;
+	}
+	
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+
+	public int getGrndclearance() {
+		return grndclearance;
+	}
+
+	public void setGrndclearance(int grndclearance) {
+		this.grndclearance = grndclearance;
+	}
+
+
+	public static void main(String[] args) {
+		
+		Vehicle vh = new Vehicle();
+	      vh.setBrand("TATA");
+	      vh.setModel("NEXON");
+	      vh.setHp(189);
+
+	      System.out.print("Brand Name : " + vh.getBrand() + " Model : " + vh.getModel() + " hp: "+ vh.getHp());
+		
+	}
+
+}
+
+Output: 
+
+Brand Name : TATA Model : NEXON hp: 189
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 2:
+
+package atcs;
+
+class Doctor{
+	
+	void docdetails()
+	{
+		System.out.println("Printing details of the doctor");
+	}
+}
+
+class Surgeon extends Doctor{                    //Single level inheritance
+	
+	void surdetails()
+	{
+		System.out.println("Printing Surgeon details");
+	}
+}
+
+class Neurosurgeon extends Surgeon{                          //multi-level inheritance
+	
+	void neuro()
+	{
+		System.out.println("Printing details of Neuro Surgeon");
+		
+	}
+}
+
+class Pediatric extends Surgeon{
+	
+	void pedi()
+	{
+		System.out.println("Printing details of Pediatric Surgeon"); //hierarchical inheritance
+	}
+}
+
+public class Inheritexample {
+	
+	
+
+	public static void main(String[] args) {
+		
+		Surgeon s  = new Surgeon();
+		s.docdetails();
+		s.surdetails();
+		
+		Neurosurgeon n = new Neurosurgeon();
+		n.neuro();
+		
+		Pediatric p = new Pediatric();
+		p.pedi();
+		
+		
+	}
+
+}
+
+
+Output:
+
+Printing details of the doctor
+Printing Surgeon details
+Printing details of Neuro Surgeon
+Printing details of Pediatric Surgeon
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 3 & 4:
+
+
+
+package atcs;
+
+class Dog{
+	
+	void legs() {
+		System.out.println("Dog has two legs");
+	}
+	
+	void sound() {
+		System.out.println("Dog barks ");
+	}
+}
+
+
+public class Animal extends Dog {
+
+	void breed() {
+		   System.out.println("Breed : Labrador");
+	   }
+	   
+	   @Override
+	   void legs() {
+		   System.out.println("Dog has Four legs");
+	   }
+	public static void main(String[] args) {
+		
+		Animal obj= new Animal();
+		
+		
+		obj.legs();
+		obj.sound();
+		obj.breed();
+
+	}
+
+}
+
+Output:
+Dog has Four legs
+Dog barks 
+Breed : Labrador
+
+
+

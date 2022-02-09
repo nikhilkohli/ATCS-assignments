@@ -1,0 +1,102 @@
+Day-2 Unix Commands
+----------------------------------------
+
+nikhilkohli@nikhilkohli-VirtualBox:~$ mkdir folder
+mkdir: cannot create directory ‘folder’: File exists
+nikhilkohli@nikhilkohli-VirtualBox:~$ cd folder
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ touch file1.txt file2.txt file3.txt
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ ls
+file1.txt  file2.txt  file3.txt
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ man ls
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ 
+
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ man -l
+What manual page do you want?
+For example, try 'man man'.
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ man date
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ date +%D
+01/28/22
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ date +%T
+18:37:07
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ date +%d/m/y
+28/m/y
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ date +%H
+18
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ date +%M/S
+37/S
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ 
+
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ cal
+    January 2022      
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+30 31                 
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ cal 1 2022
+    January 2022      
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+30 31                 
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ cal 9 2000
+   September 2000     
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+                      
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ cal 9 1999
+   September 1999     
+Su Mo Tu We Th Fr Sa  
+          1  2  3  4  
+ 5  6  7  8  9 10 11  
+12 13 14 15 16 17 18  
+19 20 21 22 23 24 25  
+26 27 28 29 30        
+                      
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ cd
+nikhilkohli@nikhilkohli-VirtualBox:~$ ls
+Desktop  Documents  Downloads  folder  Music  Pictures  Public  Templates  Videos
+nikhilkohli@nikhilkohli-VirtualBox:~$ 
+
+nikhilkohli@nikhilkohli-VirtualBox:~$ hello
+
+Command 'hello' not found, but can be installed with:
+
+sudo apt install hello              # version 2.10-2ubuntu2, or
+sudo apt install hello-traditional  # version 2.10-5
+
+nikhilkohli@nikhilkohli-VirtualBox:~$ mkdir dir1 dir2
+nikhilkohli@nikhilkohli-VirtualBox:~$ ls
+Desktop  dir1  dir2  Documents  Downloads  folder  Music  Pictures  Public  Templates  Videos
+nikhilkohli@nikhilkohli-VirtualBox:~$ rmdir dir1
+nikhilkohli@nikhilkohli-VirtualBox:~$ ls
+Desktop  dir2  Documents  Downloads  folder  Music  Pictures  Public  Templates  Videos
+nikhilkohli@nikhilkohli-VirtualBox:~$ rmdir dir2
+nikhilkohli@nikhilkohli-VirtualBox:~$ ls
+Desktop  Documents  Downloads  folder  Music  Pictures  Public  Templates  Videos
+nikhilkohli@nikhilkohli-VirtualBox:~$ 
+nikhilkohli@nikhilkohli-VirtualBox:~$ pwd
+/home/nikhilkohli
+nikhilkohli@nikhilkohli-VirtualBox:~$ 
+
+nikhilkohli@nikhilkohli-VirtualBox:~$ cd folder
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ ls
+file1.txt  file2.txt  file3.txt
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ rm file1
+rm: cannot remove 'file1': No such file or directory
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ rm file1.txt
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ ls
+file2.txt  file3.txt
+nikhilkohli@nikhilkohli-VirtualBox:~/folder$ 
+
+
+

@@ -1,0 +1,561 @@
+Section 1:
+
+Question 1:
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	
+	public static void main(String args[])
+	{ 
+		int[] array = {1, 2, 3, 4, 5};
+
+        for (int j: array) {
+            System.out.println(j);
+        }
+		
+	}
+	
+}
+
+Output:
+
+1
+2
+3
+4
+5
+
+-----------------------------------------------------------------------
+Question 2:
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	
+	public static void main(String args[])
+	{ 
+		double[] numArray = { 45.3, 67.5, -45.6, 20.34, 33.0, 45.6 };
+        double sum = 0.0;
+
+        for (double num: numArray) {
+           sum += num;
+        }
+
+        double average = sum / numArray.length;
+        System.out.format("The average is: %.2f", average);
+		
+	}
+	
+}
+
+Output:
+
+The average is: 27.69
+
+---------------------------------------------------------------------------
+
+Question 3:
+
+Section 1:
+
+Question 1:
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	
+	public static void main(String args[])
+	{ 
+		int[] array = {1, 2, 3, 4, 5};
+
+        for (int j: array) {
+            System.out.println(j);
+        }
+		
+	}
+	
+}
+
+Output:
+
+1
+2
+3
+4
+5
+
+--------------------------------------------------------------------------------
+
+Question 4:
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	
+	public static void main(String args[])
+	{ 
+		char[] ch = {'g', 'o', 'o', 'd', ' ', 'm', 'o', 'r', 'n', 'i', 'n', 'g'};
+	      String str = new String(ch);
+	      System.out.println(str);
+	}
+	
+}
+
+Output:
+
+good morning
+
+---------------------------------------------------------------------
+Question 5:
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	
+	public static void main(String args[])
+	{ 
+		int rows = 2, columns = 3;
+        int[][] firstMatrix = { {2, 3, 4}, {5, 2, 3} };
+        int[][] secondMatrix = { {-4, 5, 3}, {5, 6, 3} };
+
+        // Adding Two matrices
+        int[][] sum = new int[rows][columns];
+        for(int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                sum[i][j] = firstMatrix[i][j] + secondMatrix[i][j];
+            }
+        }
+
+        // Displaying the result
+        System.out.println("Sum of two matrices is: ");
+        for(int[] row : sum) {
+            for (int column : row) {
+                System.out.print(column + "    ");
+            }
+            System.out.println();
+        }
+	}
+	
+}
+
+Output:
+
+Sum of two matrices is: 
+-2    8    7    
+10    8    6    
+
+----------------------------------------------------------------------------------
+Question 6:
+
+package atcs;
+
+import java.io.*;
+import java.util.*;
+
+public class Hello {
+	
+	public int min(int [] array) {
+	      int min = array[0];
+	     
+	      for(int i=0; i<array.length; i++ ) {
+	         if(array[i]<min) {
+	            min = array[i];
+	         }
+	      }
+	      return min;
+	   }
+	
+	
+	public static void main(String args[])
+	{ 
+		int[] myArray = {23, 92, 56, 39, 93};
+		
+		 Hello m = new Hello();
+		
+		 System.out.println("Minimum value in the array is::"+m.min(myArray));
+        
+	}
+	
+}
+
+Output:
+
+Minimum value in the array is::23
+
+
+================================================================================================================================================================================
+
+Section 2:
+
+Question 1:
+
+
+package atcs;
+
+public class Student {
+	
+	int stid = 1;
+	String stname = "Nikhil";
+	int roll = 45;
+	char section = 'B';
+	
+	
+	void displa()
+	{
+		System.out.println("Student details are: ");
+		System.out.println("name: "+stname);
+		System.out.println("student id: "+stid);
+		System.out.println("roll no: "+roll);
+		System.out.println("section: "+section);
+	}
+
+	public static void main(String[] args) {
+		
+		Student st = new Student();
+		st.displa();
+		
+		
+
+	}
+
+}
+
+Output:
+
+Student details are: 
+name: Nikhil
+student id: 1
+roll no: 45
+section: B
+
+------------------------------------------------------------------------------------------------------------
+
+Question 2:
+
+package atcs;
+
+public class Product {
+	
+	int id;
+	String name;
+	
+	public  Product()
+	{
+		id = 1;
+		name = "Nikhil";
+	}
+	
+	public void Display()
+	{
+		System.out.println("id is: "+id+" "+"name is: "+name);
+	}
+
+	public static void main(String[] args) {
+		
+		Product ob = new Product();
+		ob.Display();
+		
+
+
+	}
+
+}
+
+Output:
+
+id is: 1 name is: Nikhil
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 3:
+
+package atcs;
+
+public class Student {
+	
+	int stid;
+	String stname;
+	int roll;
+	char section;
+	
+	
+	public Student()
+	{
+		stid = 1;
+		stname = "Nikhil";
+		roll = 45;
+		section = 'B';
+		
+	}
+	public void display()
+	{
+		System.out.println("Student details are: ");
+		System.out.println("name: "+stname);
+		System.out.println("student id: "+stid);
+		System.out.println("roll no: "+roll);
+		System.out.println("section: "+section);
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		Student st = new Student();
+		st.display();
+		
+		
+
+	}
+
+}
+
+Output:
+
+Student details are: 
+name: Nikhil
+student id: 1
+roll no: 45
+section: B
+
+
+
+
+with parameteized construcotr:
+
+package atcs;
+
+public class Student1 {
+	
+	int id;
+	String name;
+	
+	public Student1(int id,String name)
+	{
+		this.id =id;
+		this.name = name;
+		
+	}
+	
+	public void Display()
+	{
+		System.out.println("id is: "+id);
+		System.out.println("name is: "+name);
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Student1 ob = new Student1(15,"nikhil");
+		ob.Display();
+		
+
+	}
+
+}
+
+Output:
+
+id is: 15
+name is: nikhil
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Question 4:
+
+package atcs;
+
+public class Calculator {
+	
+	static int id;
+	static String name;
+	
+	public static void assign()
+	{
+		id =1;
+		name = "nihkil";
+	}
+	
+	public static int displayid()
+	{
+		return id;
+		
+	}
+	
+	public static String dis()
+	{
+		return name;
+	}
+
+	public static void main(String[] args) {
+		
+		Calculator.assign();
+		System.out.println(Calculator.displayid());
+		System.out.println(Calculator.dis());
+	
+
+	}
+
+}
+
+Output:
+
+1
+nihkil
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Question 5:
+
+package atcs;
+
+public class Calculator {
+	
+	 int id;
+	 String name;
+	
+	public void assign()
+	{
+		id =1;
+		name = "nihkil";
+	}
+	
+	public int displayid()
+	{
+		return id;
+		
+	}
+	
+	public  String dis()
+	{
+		return name;
+	}
+
+	public static void main(String[] args) {
+		
+		Calculator sc = new Calculator();
+		
+		sc.assign();
+		System.out.println(sc.displayid());
+		System.out.println(sc.dis());
+	
+
+	}
+
+}
+
+Output:
+
+1
+nihkil
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Question 6:
+
+
+package atcs;
+
+public class Test {
+
+	public static void main(String[] args) {
+		String targetString = "Java is fun to learn";
+		String s1= "JAVA";
+		String s2= "Java";
+		String s3 = "  Hello Java  ";
+		
+		System.out.println("Char at index 2(third position): " + targetString.charAt(2));
+		System.out.println("After Concat: "+ targetString.concat("-Enjoy-"));
+		System.out.println("Checking equals ignoring case: " +s2.equalsIgnoreCase(s1));
+		System.out.println("Checking equals with case: " +s2.equals(s1));
+		System.out.println("Checking Length: "+ targetString.length());
+		System.out.println("Replace function: "+ targetString.replace("fun", "easy"));
+		System.out.println("SubString of targetString: "+ targetString.substring(8));
+		System.out.println("SubString of targetString: "+ targetString.substring(8, 12));
+		System.out.println("Converting to lower case: "+ targetString.toLowerCase());
+		System.out.println("Converting to upper case: "+ targetString.toUpperCase());
+		System.out.println("Triming string: " + s3.trim());
+		System.out.println("searching s1 in targetString: " + targetString.contains(s1));
+		System.out.println("searching s2 in targetString: " + targetString.contains(s2));
+
+		char [] charArray = s2.toCharArray();
+		System.out.println("Size of char array: " + charArray.length);
+		System.out.println("Printing last element of array: " + charArray[3]);
+
+	}
+
+}
+
+
+Output:
+
+Char at index 2(third position): v
+After Concat: Java is fun to learn-Enjoy-
+Checking equals ignoring case: true
+Checking equals with case: false
+Checking Length: 20
+Replace function: Java is easy to learn
+SubString of targetString: fun to learn
+SubString of targetString: fun 
+Converting to lower case: java is fun to learn
+Converting to upper case: JAVA IS FUN TO LEARN
+Triming string: Hello Java
+searching s1 in targetString: false
+searching s2 in targetString: true
+Size of char array: 4
+Printing last element of array: a
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Question 7:
+
+package atcs;
+
+public class Add {
+	
+	public static void main(String[] args) {
+		
+		Integer a = new Integer(2);
+		Integer b = new Integer(3);
+		
+		int c = a.intValue()+b.intValue();
+		System.out.println(c);
+		
+
+	}
+
+}
+
+Output: 5
+
+
+
+
+
+
+
+
+
+

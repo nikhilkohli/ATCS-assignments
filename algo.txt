@@ -1,0 +1,62 @@
+Question 1:
+
+Step 1: Read two inputs H and B
+Step 2: Area=1/2(B*H)
+Step 3: Print Area
+Step 4: Stop
+----------------------------------------------------- 
+Question 3:
+
+Read A,B
+SUM = A+B
+SUB = A-B
+MUL = A*B
+DIV = A/B
+----------------------------------------------------
+
+Question 6:
+
+Step 1: Read three inputs P,R,T
+Step 2: SI = P*R*T/100
+Step 3: Print SI
+Step 4: Stop
+----------------------------------------------------
+
+Question 7:
+
+Step 1: Read three inputs A,B,C
+Step 2: If(A>B)
+        Large = A
+
+       else
+       Large = B        
+Step 3: If(Large<C)
+        Large = C
+Step 4: Print Large
+Step 5: Stop
+------------------------------------------------------
+
+Question 8:
+
+Step-1: Read N
+Step-2: c=0
+Step-3: for(i=2;i<N/2;i++)
+Step-4: if N%i=0 then
+Step-5: c=1 and break
+Step-6: repeat step-3 and N-1
+Step-7: if c=0 then
+        Print The number is prime
+        Else
+        Print The number is not prime
+Step-8: Stop
+
+
+
+
+
+
+
+
+
+
+
