@@ -1,30 +1,39 @@
 package collection;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Question5 {
 
 	public static void main(String[] args) {
 		
-		ArrayList al = new ArrayList();
+		HashSet<String> hs = new HashSet<String>();
 		
-		for(int i=0;i<10;i++)
-		{
-			al.add(i);
-			
-		}
-		System.out.println(al);
-		
-		for(Object o:al)                 //prints even numbers
-		{
-			Integer i = (Integer) o;
-			if(i%2==0)
-			{
-				System.out.println(i);
-			}
-			
-		}
+		hs.add("nikhil");
+		hs.add("kohli");
+		hs.add("atcs");
+		hs.add("java");
+		hs.add("java");
 
+		System.out.println(hs);
+		
+		
+        HashSet<String> hs1 = new HashSet<String>();
+        
+		hs1.add("developer");
+		hs1.add("computers");
+		
+		
+		
+		hs.addAll(hs1);
+		System.out.println(hs);
+		
+		hs.remove(hs1);
+		System.out.println(hs1);
+
+		
+		
+		
+		
 
 	}
 
