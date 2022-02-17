@@ -25,6 +25,12 @@ public class Trycatchex {
 		
 	}
 	
-	
-
 }
+
+
+	Enter first number
+        15
+        Enter second number
+        0
+        Exception in thread "main" java.lang.ArithmeticException: / by zero
+	       at exceptionhandling.Scannerclassdividenumbers.main(Scannerclassdividenumbers.java:21)
