@@ -1,80 +1,52 @@
-package javapractice;
+package java8features;
 
-import java.security.KeyStore.Entry;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.function.Predicate;
 
-public class Employee {
+
+class Emp{
 	
-	private String empname;
-    private int empcode;
-	private int empsalary;
-	private String empaddress;
-	private int emppincode;
+	String name;
+	int salary;
 	
 	
-	public Employee()
-	{
-		
-	}
-	
-	public Employee(String empname,int empcode, int empsalary, String empaddress,
-			int emppincode) {
-		
-		this.empname = empname;
-		this.empcode = empcode;
-		this.empsalary = empsalary;
-		this.empaddress = empaddress;
-		this.emppincode = emppincode;
+	public Emp(String name, int salary) {
+		this.name = name;
+		this.salary = salary;
 	}
 
-	public String getEmpname() {
-		return empname;
-	}
-
-	public void setEmpname(String empname) {
-		this.empname = empname;
-	}
-	
-	public int getEmpcode() {
-		return empcode;
-	}
-
-	public void setEmpcode(int empcode) {
-		this.empcode = empcode;
-	}
-
-	public int getEmpsalary() {
-		return empsalary;
-	}
-
-	public void setEmpsalary(int empsalary) {
-		this.empsalary = empsalary;
-	}
-
-	public String getEmpaddress() {
-		return empaddress;
-	}
-
-	public void setEmpaddress(String empaddress) {
-		this.empaddress = empaddress;
-	}
-
-	public int getEmppincode() {
-		return emppincode;
-	}
-
-	public void setEmppincode(int emppincode) {
-		this.emppincode = emppincode;
-	}
 
 	@Override
 	public String toString() {
-		return "Employee [empname=" + empname + ", empcode=" + empcode + ", empsalary=" + empsalary + ", empaddress="
-				+ empaddress + ", emppincode=" + emppincode + "]";
+		return "emp [name=" + name + ", Salary=" + salary + "]";
 	}
+	
 	
 }
 
+public class Employee {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Emp> ar = new ArrayList<Emp>();
+		
+		ar.add(new Emp("Nikhil",50000));
+		ar.add(new Emp("Subash",5000));
+		ar.add(new Emp("Sudesh",20000));
+		ar.add(new Emp("ankush",3000));
+		
+		Predicate<Emp> p =a->a.salary>7000;
+		
+		
+		for(Emp e:ar)
+		
+		{
+			if(p.test(e));
+			System.out.println(p.test(e));
+		}
+		
+	
+		
+		
+	}
+}
