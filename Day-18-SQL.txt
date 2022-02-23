@@ -1,0 +1,164 @@
+Question 1:
+
+
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Password for user postgres:
+psql (10.20)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# create database nikhilkohli;
+CREATE DATABASE
+postgres=# \c
+You are now connected to database "postgres" as user "postgres".
+postgres=# \l
+                                          List of databases
+    Name     |  Owner   | Encoding |      Collate       |       Ctype        |   Access privileges
+-------------+----------+----------+--------------------+--------------------+-----------------------
+ nikhilkohli | postgres | UTF8     | English_India.1252 | English_India.1252 |
+ postgres    | postgres | UTF8     | English_India.1252 | English_India.1252 |
+ template0   | postgres | UTF8     | English_India.1252 | English_India.1252 | =c/postgres          +
+             |          |          |                    |                    | postgres=CTc/postgres
+ template1   | postgres | UTF8     | English_India.1252 | English_India.1252 | =c/postgres          +
+             |          |          |                    |                    | postgres=CTc/postgres
+(4 rows)
+
+
+postgres=# create table student(sid int, sname varchar(20));
+CREATE TABLE
+postgres=# \d student
+                     Table "public.student"
+ Column |         Type          | Collation | Nullable | Default
+--------+-----------------------+-----------+----------+---------
+ sid    | integer               |           |          |
+ sname  | character varying(20) |           |          |
+
+
+postgres=# \d nikhilkohli
+Did not find any relation named "nikhilkohli".
+postgres=# select * from student;
+ sid | sname
+-----+-------
+(0 rows)
+
+
+postgres=# alter table student add column class int;
+ALTER TABLE
+postgres=# \d student
+                     Table "public.student"
+ Column |         Type          | Collation | Nullable | Default
+--------+-----------------------+-----------+----------+---------
+ sid    | integer               |           |          |
+ sname  | character varying(20) |           |          |
+ class  | integer               |           |          |
+
+
+postgres=# alter table student add column rollnumber int;
+ALTER TABLE
+postgres=# \d student;
+                       Table "public.student"
+   Column   |         Type          | Collation | Nullable | Default
+------------+-----------------------+-----------+----------+---------
+ sid        | integer               |           |          |
+ sname      | character varying(20) |           |          |
+ class      | integer               |           |          |
+ rollnumber | integer               |           |          |
+
+
+postgres=# insert into student values(1,'nikhil',12,45);
+INSERT 0 1
+postgres=# select * from student;
+ sid | sname  | class | rollnumber
+-----+--------+-------+------------
+   1 | nikhil |    12 |         45
+(1 row)
+
+
+postgres=# insert into student values(2,'ankush',12,5);
+INSERT 0 1
+postgres=# \d student;
+                       Table "public.student"
+   Column   |         Type          | Collation | Nullable | Default
+------------+-----------------------+-----------+----------+---------
+ sid        | integer               |           |          |
+ sname      | character varying(20) |           |          |
+ class      | integer               |           |          |
+ rollnumber | integer               |           |          |
+
+
+postgres=# select * from student;
+ sid | sname  | class | rollnumber
+-----+--------+-------+------------
+   1 | nikhil |    12 |         45
+   2 | ankush |    12 |          5
+(2 rows)
+
+
+postgres=# update student set rollnumber=1 where sname='nikhil';
+UPDATE 1
+postgres=# select * from student;
+ sid | sname  | class | rollnumber
+-----+--------+-------+------------
+   2 | ankush |    12 |          5
+   1 | nikhil |    12 |          1
+(2 rows)
+
+
+postgres=#
+
+
+
+
+
+
+========================================================================================================
+
+Question 2:
+
+postgres=# create table manager;
+ERROR:  syntax error at or near ";"
+LINE 1: create table manager;
+                            ^
+postgres=# create table manager(id int,name varchar(20));
+CREATE TABLE
+postgres=# \d manager;
+                     Table "public.manager"
+ Column |         Type          | Collation | Nullable | Default
+--------+-----------------------+-----------+----------+---------
+ id     | integer               |           |          |
+ name   | character varying(20) |           |          |
+
+
+postgres=# insert into manager values(1,'Anjali');
+INSERT 0 1
+postgres=# select * from manager;
+ id |  name
+----+--------
+  1 | Anjali
+(1 row)
+
+
+postgres=# create table employee(eid int,ename varchar(20));
+CREATE TABLE
+postgres=# insert into employee values(1,'nikhil');
+INSERT 0 1
+postgres=# select * from employee;
+ eid | ename
+-----+--------
+   1 | nikhil
+(1 row)
+
+
+postgres=# select e.eid,e.ename,m.id,m.name from employee e,manager m;
+ eid | ename  | id |  name
+-----+--------+----+--------
+   1 | nikhil |  1 | Anjali
+(1 row)
+
+
+postgres=#
