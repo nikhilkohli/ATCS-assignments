@@ -1,48 +1,42 @@
-package collection;
-import java.util.*;
+package com.ia.employeecrud;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 public class Test {
-
+	
 	public static void main(String[] args) {
-
-
-		ArrayList al = new ArrayList();
 		
-		System.out.println("using add method: ");
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("nikhil");
 		
-		for(int i=0;i<10;i++)
-		{
-			al.add(i);
-			
-		}
-		System.out.println(al);
+		EntityManager entity = factory.createEntityManager();
 		
-		System.out.println("using get method");
+		Employee emp = new Employee(1509, "nikhil", 500000, "delhi");
 		
-		for(int i=0;i<al.size();i++)
-		{
-			System.out.println(al.get(i));
-		}
+		entity.getTransaction().begin();
 		
-		System.out.println("using for each loop: ");
+		entity.persist(emp);
 		
-		for(Object o:al)
-		{
-			System.out.println(o);
-		}
+		Employee emp1=entity.find(Employee.class, 1509);
+		System.out.println(emp1); 
 		
-		System.out.println("using iterator");
+		emp.setEmpAdd("gurugram");
+		emp.setEmpname("vikrant");
+		emp.setEmpsal(35000);
+	
+		entity.getTransaction().commit();
 		
-		for(Object o:al)                 //prints odd numbers
-		{
-			Integer i = (Integer) o;
-			if(i%2!=0)
-			{
-				System.out.println(i);
-			}
-			
-		}
-
+		
+		
 	}
+	
 
+	
 }
+
+////persist()-->save or insert, merge()-->update, remove()-->delte, find()==>selct fetch
+//entity.merge(emp);
+//entity.remove(emp);
+
+

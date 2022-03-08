@@ -1,52 +1,64 @@
-package java8features;
+package com.ia.employeecrud;
 
-import java.util.ArrayList;
-import java.util.function.Predicate;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-
-class Emp{
+@Entity
+@Table(name="employee")
+public class Employee {
+	@Id
+	@Column(name="emmployeeid")
+	private int empid;
+	private String empname;
+	private int empsal;
+	private String empAdd;
 	
-	String name;
-	int salary;
-	
-	
-	public Emp(String name, int salary) {
-		this.name = name;
-		this.salary = salary;
+	public Employee()
+	{
+		
 	}
-
-
+	
+	public Employee(int empid, String empname, int empsal, String empAdd) {
+		super();
+		this.empid = empid;
+		this.empname = empname;
+		this.empsal = empsal;
+		this.empAdd = empAdd;
+	}
+	
+	
+	public int getEmpid() {
+		return empid;
+	}
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+	public String getEmpname() {
+		return empname;
+	}
+	public void setEmpname(String empname) {
+		this.empname = empname;
+	}
+	public int getEmpsal() {
+		return empsal;
+	}
+	public void setEmpsal(int empsal) {
+		this.empsal = empsal;
+	}
+	public String getEmpAdd() {
+		return empAdd;
+	}
+	public void setEmpAdd(String empAdd) {
+		this.empAdd = empAdd;
+	}
 	@Override
 	public String toString() {
-		return "emp [name=" + name + ", Salary=" + salary + "]";
+		return "Employee [empid=" + empid + ", empname=" + empname + ", empsal=" + empsal + ", empAdd=" + empAdd + "]";
 	}
 	
 	
-}
-
-public class Employee {
-
-	public static void main(String[] args) {
-		
-		ArrayList<Emp> ar = new ArrayList<Emp>();
-		
-		ar.add(new Emp("Nikhil",50000));
-		ar.add(new Emp("Subash",5000));
-		ar.add(new Emp("Sudesh",20000));
-		ar.add(new Emp("ankush",3000));
-		
-		Predicate<Emp> p =a->a.salary>7000;
-		
-		
-		for(Emp e:ar)
-		
-		{
-			if(p.test(e));
-			System.out.println(p.test(e));
-		}
-		
 	
-		
-		
-	}
+
 }
