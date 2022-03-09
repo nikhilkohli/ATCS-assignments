@@ -1,42 +1,30 @@
-package com.ia.employeecrud;
+package com.io.springcoreexample;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 public class Test {
+public static void main(String[] args) {
 	
-	public static void main(String[] args) {
-		
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("nikhil");
-		
-		EntityManager entity = factory.createEntityManager();
-		
-		Employee emp = new Employee(1509, "nikhil", 500000, "delhi");
-		
-		entity.getTransaction().begin();
-		
-		entity.persist(emp);
-		
-		Employee emp1=entity.find(Employee.class, 1509);
-		System.out.println(emp1); 
-		
-		emp.setEmpAdd("gurugram");
-		emp.setEmpname("vikrant");
-		emp.setEmpsal(35000);
-	
-		entity.getTransaction().commit();
-		
-		
-		
-	}
 	
 
+	
+	Resource resource = new ClassPathResource("springConfig.xml");
+	
+	
+	BeanFactory factory= new XmlBeanFactory(resource);
+	
+	  Employee emp =(Employee) factory.getBean("empobj");
+	  
+	  System.out.println(emp);
+	  
+    Employee emp1 =(Employee) factory.getBean("empobj1");
+	  
+	  System.out.println(emp1);
+	
+	
 	
 }
-
-////persist()-->save or insert, merge()-->update, remove()-->delte, find()==>selct fetch
-//entity.merge(emp);
-//entity.remove(emp);
-
-
+}

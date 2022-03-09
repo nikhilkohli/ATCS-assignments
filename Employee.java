@@ -1,64 +1,53 @@
-package com.ia.employeecrud;
+package com.io.springcoreexample;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="employee")
-public class Employee {
-	@Id
-	@Column(name="emmployeeid")
+public class Employee { //beans class or POJO CLASS 
+	
 	private int empid;
 	private String empname;
 	private int empsal;
-	private String empAdd;
-	
-	public Employee()
-	{
-		
-	}
-	
-	public Employee(int empid, String empname, int empsal, String empAdd) {
-		super();
-		this.empid = empid;
-		this.empname = empname;
-		this.empsal = empsal;
-		this.empAdd = empAdd;
-	}
+	private String empadd;
 	
 	
 	public int getEmpid() {
 		return empid;
 	}
-	public void setEmpid(int empid) {
+	public void setEmpid(int empid) { //100
 		this.empid = empid;
 	}
 	public String getEmpname() {
 		return empname;
 	}
-	public void setEmpname(String empname) {
+	public void setEmpname(String empname) {//nikhil
 		this.empname = empname;
 	}
 	public int getEmpsal() {
 		return empsal;
 	}
-	public void setEmpsal(int empsal) {
+	public void setEmpsal(int empsal) { //1000
 		this.empsal = empsal;
 	}
-	public String getEmpAdd() {
-		return empAdd;
+	public String getEmpadd() {
+		return empadd;
 	}
-	public void setEmpAdd(String empAdd) {
-		this.empAdd = empAdd;
+	public void setEmpadd(String empadd) { //jammu
+		this.empadd = empadd;
+	}
+	
+	
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+	public Employee(int empid, String empname, int empsal, String empadd) {
+		super();
+		this.empid = empid;
+		this.empname = empname;
+		this.empsal = empsal;
+		this.empadd = empadd;
 	}
 	@Override
 	public String toString() {
-		return "Employee [empid=" + empid + ", empname=" + empname + ", empsal=" + empsal + ", empAdd=" + empAdd + "]";
+		return "Employee [empid=" + empid + ", empname=" + empname + ", empsal=" + empsal + ", empadd=" + empadd + "]";
 	}
 	
 	
-	
-
 }
