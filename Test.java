@@ -14,10 +14,10 @@ public static void main(String[] args) {
 	
 	ApplicationContext factory= new AnnotationConfigApplicationContext(Test.class);
 	
-	Employee emp =(Employee) factory.getBean("nikhil");
+	Employee emp =(Employee) factory.getBean("employee");
 	  System.out.println(emp); 
 	
-	  Employee emp1 =(Employee) factory.getBean("add");
+	  Employee emp1 =(Employee) factory.getBean("employee");
 	  System.out.println(emp1);
 	  
 }
