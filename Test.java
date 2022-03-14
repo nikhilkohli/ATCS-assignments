@@ -1,30 +1,24 @@
-package com.io.springcoreexample;
+package SpringCoreAutowireAtc.com.springcore;
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
+
+@Configuration
+@ComponentScan("SpringCoreAutowireAtc.com.springcore")
 public class Test {
 public static void main(String[] args) {
 	
 	
-
+	ApplicationContext factory= new AnnotationConfigApplicationContext(Test.class);
 	
-	Resource resource = new ClassPathResource("springConfig.xml");
+	Employee emp =(Employee) factory.getBean("nikhil");
+	  System.out.println(emp); 
 	
-	
-	BeanFactory factory= new XmlBeanFactory(resource);
-	
-	  Employee emp =(Employee) factory.getBean("empobj");
-	  
-	  System.out.println(emp);
-	  
-    Employee emp1 =(Employee) factory.getBean("empobj1");
-	  
+	  Employee emp1 =(Employee) factory.getBean("add");
 	  System.out.println(emp1);
-	
-	
-	
+	  
 }
 }

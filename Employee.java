@@ -1,53 +1,66 @@
-package com.io.springcoreexample;
+package SpringCoreAutowireAtc.com.springcore;
 
-public class Employee { //beans class or POJO CLASS 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("prototype")
+public class Employee {
 	
 	private int empid;
 	private String empname;
 	private int empsal;
-	private String empadd;
 	
-	
-	public int getEmpid() {
-		return empid;
-	}
-	public void setEmpid(int empid) { //100
-		this.empid = empid;
-	}
-	public String getEmpname() {
-		return empname;
-	}
-	public void setEmpname(String empname) {//nikhil
-		this.empname = empname;
-	}
-	public int getEmpsal() {
-		return empsal;
-	}
-	public void setEmpsal(int empsal) { //1000
-		this.empsal = empsal;
-	}
-	public String getEmpadd() {
-		return empadd;
-	}
-	public void setEmpadd(String empadd) { //jammu
-		this.empadd = empadd;
-	}
-	
+	       @Autowired   //by type
+	       Address address; //has -a dependent object //has a relation
+	      
+	       //dependent object will injecting(created) automatically
+	     
+			public int getEmpid() {
+				return empid;
+			}
+			public void setEmpid(int empid) {
+				this.empid = empid;
+			}
+			public String getEmpname() {
+				return empname;
+			}
+			public void setEmpname(String empname) {
+				this.empname = empname;
+			}
+			public int getEmpsal() {
+				return empsal;
+			}
+			public void setEmpsal(int empsal) {
+				this.empsal = empsal;
+			}
+			public Address getAddress() {
+				return address;
+			}
+			@Autowired  //byName
+			public void setAddress(Address address) {
+				this.address = address;
+			}
 	
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
-	public Employee(int empid, String empname, int empsal, String empadd) {
+	//@Autowired
+	public Employee(int empid, String empname, int empsal, Address address) {
 		super();
 		this.empid = empid;
 		this.empname = empname;
 		this.empsal = empsal;
-		this.empadd = empadd;
+		this.address = address;
 	}
+	
 	@Override
 	public String toString() {
-		return "Employee [empid=" + empid + ", empname=" + empname + ", empsal=" + empsal + ", empadd=" + empadd + "]";
+		return "Employee [empid=" + empid + ", empname=" + empname + ", empsal=" + empsal + ", address=" + address
+				+ "]";
 	}
+//	
 	
 	
-}
+}	
