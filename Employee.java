@@ -1,66 +1,58 @@
-package SpringCoreAutowireAtc.com.springcore;
+package com.cap.entity;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Component
-@Scope("prototype")
+@Entity
+@Table(name="emp_info")
 public class Employee {
+	@Id
+	@GeneratedValue
+	@Column(length=12)
+	private int eid; 
+	@Column(length=12)
+	private String ename;
+	@Column(length=12)
+	private int esal;
+	@Column(length=12)
+	private String city;
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	public int getEsal() {
+		return esal;
+	}
+	public void setEsal(int esal) {
+		this.esal = esal;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
 	
-	private int empid;
-	private String empname;
-	private int empsal;
-	
-	       @Autowired   //by type
-	       Address address; //has -a dependent object //has a relation
-	      
-	       //dependent object will injecting(created) automatically
-	     
-			public int getEmpid() {
-				return empid;
-			}
-			public void setEmpid(int empid) {
-				this.empid = empid;
-			}
-			public String getEmpname() {
-				return empname;
-			}
-			public void setEmpname(String empname) {
-				this.empname = empname;
-			}
-			public int getEmpsal() {
-				return empsal;
-			}
-			public void setEmpsal(int empsal) {
-				this.empsal = empsal;
-			}
-			public Address getAddress() {
-				return address;
-			}
-			@Autowired  //byName
-			public void setAddress(Address address) {
-				this.address = address;
-			}
-	
+	public int getEid() {
+		return eid;
+	}
+	public void setEid(int eid) {
+		this.eid = eid;
+	}
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
-	//@Autowired
-	public Employee(int empid, String empname, int empsal, Address address) {
+	public Employee(int eid, String ename, int esal, String city) {
 		super();
-		this.empid = empid;
-		this.empname = empname;
-		this.empsal = empsal;
-		this.address = address;
+		this.eid = eid;
+		this.ename = ename;
+		this.esal = esal;
+		this.city = city;
 	}
 	
-	@Override
-	public String toString() {
-		return "Employee [empid=" + empid + ", empname=" + empname + ", empsal=" + empsal + ", address=" + address
-				+ "]";
-	}
-//	
-	
-	
-}	
+}
