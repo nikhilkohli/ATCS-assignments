@@ -18,7 +18,7 @@ public class CovidDao {
 		  {  
 			  con= CovidDb.getConnection();
 			  
-			  String ins_str = "insert into owedcoviddata values(?,?,?,?)";
+			  String ins_str = "insert into owedcoviddata values(?,?,?,?,?,?,?,?)";
 			 
 			  pstmt = con.prepareStatement(ins_str);
 			  
